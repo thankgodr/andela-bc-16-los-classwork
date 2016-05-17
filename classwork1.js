@@ -8,8 +8,14 @@ function NotesApplication(author){
 
 	this.listNotes() = function(){
 		for(var i = 0; i < notelist.length; i++){
-			console.log("Note ID: "notelist[i][0])
+			console.log("Note ID: "notelist[i][0]);
+			console.log("Note ID: "notelist[i][1]);
+			console.log("By Author " this.author);
 		}
+	}
+
+	this.get = function(note_id){
+		
 	}
 	
 
