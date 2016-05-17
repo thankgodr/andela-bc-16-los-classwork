@@ -1,16 +1,17 @@
-function getRandomizer(bottom, top) {
-    return function() {
-        return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-    }
-}
-
 function NotesApplication(author){
 	this.author = author;
-	this.notelist = {}
+	var notelist = [];
 
-	var create = function(note_content){
-         
+	 this.create = function(note_content,note_id){
+         notelist.push([note_id,note_content])
+	}
+
+	this.listNotes() = function(){
+		for(var i = 0; i < notelist.length; i++){
+			console.log("Note ID: "notelist[i][0])
+		}
 	}
 	
+
 }
 
