@@ -34,8 +34,7 @@ NotesApplication.prototype.search = function(search_text){
 		obj = []
 		for(var i =0; i <notelist.length; i++){
 			if( !notelist[i].search(search_text) == -1){
-                obj.push(notelist[i][0]) ;
-                obj.push(notelist[i][1]) ; 
+                obj.push([i,notelist[i]]);        
 			}
 		}
 		if(obj.length > 0){
