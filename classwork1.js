@@ -1,12 +1,16 @@
-function NotesApplication(note_content){
-	this.note_content = note_content;
-	this.listNotes = function(){
-
-	}
-
+function getRandomizer(bottom, top) {
+    return function() {
+        return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+    }
 }
 
-NotesApplication.prototype.method_name = function(author) {
-	// body...
+function NotesApplication(author){
 	this.author = author;
-};
+	this.notelist = {}
+
+	var create = function(note_content){
+         
+	}
+	
+}
+
