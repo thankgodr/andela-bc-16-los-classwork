@@ -57,17 +57,17 @@ NotesApplication.prototype.get = function(note_id){
 */
 NotesApplication.prototype.search = function(search_text){
 	var obj = [];
-		for(var i =0; i < this.notelist.length; i++){
-			if( this.notelist[i].search(search_text) == -1){
-				return "Text does not exist";
-			}
-			else{
-				obj.push({1: "Note ID: " + i, 
-				          2: this.notelist[i],
-				          3: "By Author " + this.author + "\n"
-				});
-			}
+	for(var i =0; i < this.notelist.length; i++){
+		if( this.notelist[i].search(search_text) == -1){
+			return "Text does not exist";
 		}
+		else{
+			obj.push({1: "Note ID: " + i, 
+				      2: this.notelist[i],
+				      3: "By Author " + this.author + "\n"
+				    });
+		}
+	}
 	//for testing purposes only
 	for(var j = 0; j <obj.length; j++){
 		for(var key in obj[j]){
@@ -82,10 +82,8 @@ NotesApplication.prototype.delete = function(note_id){
 		return "Id does not Exist";
 	}
 	else{
-		
 		this.notelist.splice(note_id,1);
-		return "Content Deleted";
-		
+		return "Content Deleted";	
 	}
 	
 };
